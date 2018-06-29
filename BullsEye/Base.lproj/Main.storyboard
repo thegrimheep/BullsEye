@@ -177,21 +177,17 @@
                                     <action selector="close" destination="lvX-li-O8v" eventType="touchUpInside" id="Zts-M6-eC8"/>
                                 </connections>
                             </button>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="htJ-QQ-PwL">
-                                <rect key="frame" x="20" y="20" width="528" height="228"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ps8-Py-Ww2">
+                                <rect key="frame" x="20" y="20" width="528" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="L5R-Fc-G9o"/>
                     </view>
                     <connections>
-                        <outlet property="webview" destination="htJ-QQ-PwL" id="C23-rQ-A9L"/>
+                        <outlet property="webview" destination="ps8-Py-Ww2" id="gpd-9b-WOs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHP-Ml-KFE" userLabel="First Responder" sceneMemberID="firstResponder"/>

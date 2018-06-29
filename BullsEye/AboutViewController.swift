@@ -12,6 +12,7 @@ class AboutViewController: UIViewController {
     
     @IBOutlet weak var webview: UIWebView!
     
+    
     //connects to the done button and send player back to the game. dismiss
     @IBAction func close() {
         dismiss(animated: true, completion: nil)
