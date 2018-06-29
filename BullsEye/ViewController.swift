@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         let trackImageRight = #imageLiteral(resourceName: "SliderTrackRight")
         let trackRightResizable = trackImageRight.resizableImage(withCapInsets: insets)
         slider.setMaximumTrackImage(trackRightResizable, for: .normal)
-        
     }
     
     //update labels for now update the target value the player is trying to hit.
@@ -84,12 +83,12 @@ class ViewController: UIViewController {
     //Hit me buttome tapped
     @IBAction func showAlert() {
         
-        //        if something is true {
+        //        if this thing is true {
         //            then do this
         //        } else if this is true {
         //            then do this instead
         //        } else {
-        //            do something else if neither of the above are true
+        //            do this thing else if neither of the above are true
         //        }
         
         //var is the difference between the target and the current value
@@ -126,7 +125,6 @@ class ViewController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
-        
     }
     //the local variables are restricted to this method. They stop when this is complete.
 }
