@@ -23,48 +23,48 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentValue = lroundf(slider.value)
-        currentRound = 0
+        self.currentValue = lroundf(slider.value)
+        self.currentRound = 0
         
         startNewRound()
         
         let thumbImageNormal = #imageLiteral(resourceName: "SliderThumb-Normal")
-        slider.setThumbImage(thumbImageNormal, for: .normal)
+        self.slider.setThumbImage(thumbImageNormal, for: .normal)
         
         let thumbImageHighlighted = #imageLiteral(resourceName: "SliderThumb-Highlighted")
-        slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        self.slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
         
         let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
         
         let trackImageLeft = #imageLiteral(resourceName: "SliderTrackLeft")
         let trackLeftResizable = trackImageLeft.resizableImage(withCapInsets: insets)
-        slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+        self.slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
         
         let trackImageRight = #imageLiteral(resourceName: "SliderTrackRight")
         let trackRightResizable = trackImageRight.resizableImage(withCapInsets: insets)
-        slider.setMaximumTrackImage(trackRightResizable, for: .normal)
+        self.slider.setMaximumTrackImage(trackRightResizable, for: .normal)
     }
     
     //update labels for now update the target value the player is trying to hit.
     func updateLabels() {
-        targetLabel.text = String(targetValue)
-        totalScore.text = String(score)
-        roundLabel.text = String(currentRound)
+        self.targetLabel.text = String(targetValue)
+        self.totalScore.text = String(score)
+        self.roundLabel.text = String(currentRound)
     }
     
     //I am resetting the target value each time the user starts a new round.
     func startNewRound() {
-        targetValue = 1 + Int(arc4random_uniform(100))
-        currentValue = 50
-        currentRound = 1 + currentRound
-        slider.value = Float(currentValue)
+        self.targetValue = 1 + Int(arc4random_uniform(100))
+        self.currentValue = 50
+        self.currentRound = 1 + self.currentRound
+        self.slider.value = Float(currentValue)
         
         updateLabels()
     }
     
     func startNewGame() {
-        currentRound = 0
-        score = 0
+        self.currentRound = 0
+        self.score = 0
         
         startNewRound()
     }
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     //Slider action defined here, get the numerical value of the sliders position.
     @IBAction func sliderMoved(_ slider: UISlider) {
         print("The value of the slider is now: \(slider.value)")
-        currentValue = lroundf(slider.value)
+        self.currentValue = lroundf(slider.value)
     }
     
     //Start Over Button is tapped
@@ -112,7 +112,7 @@ class ViewController: UIViewController {
             title = "Not even close, Brah!"
         }
         
-        score += points
+        self.score += points
         
         //displays the target and the sliders actual value.
         let message = "The Bull's Eye is on \(lroundf(slider.value)) which gives you \(points) points"
