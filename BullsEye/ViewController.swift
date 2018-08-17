@@ -115,7 +115,7 @@ class ViewController: UIViewController {
         score += points
         
         //displays the target and the sliders actual value.
-        let message = "The Bull's Eye is \(lroundf(slider.value)) and you scored \(points) points"
+        let message = "The Bull's Eye is on \(lroundf(slider.value)) which gives you \(points) points"
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Again", style: .default, handler: {
             action in
