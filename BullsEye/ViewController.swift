@@ -96,7 +96,7 @@ class ViewController: UIViewController {
         let difference = abs(targetValue - currentValue)
         var points = 100 - difference
         
-        //this give the player a customer message based on their result
+        //this gives the player a customer message based on their result
         let title: String
         if difference == 0 {
             title = "On the money"
@@ -115,7 +115,7 @@ class ViewController: UIViewController {
         score += points
         
         //displays the target and the sliders actual value.
-        let message = "You scored \(points) points"
+        let message = "The Bull's Eye is \(lroundf(slider.value)) and you scored \(points) points"
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Again", style: .default, handler: {
             action in
